@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power of Lamp Filament</title>
+    <style>
+        body {
+            font-size: 20px;
+            background-color: #e6f7ff;
+        }
+        .formelt {
+            color: #003366;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #cc0000;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="edge">
+        <div class="box">
+            <h1>Power of a Lamp Filament</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="formelt">
+                    Intensity (I): <input type="text" name="intensity" value="{{ i }}"> A<br><br>
+                </div>
+                <div class="formelt">
+                    Resistance (R): <input type="text" name="resistance" value="{{ r }}"> Ω<br><br>
+                </div>
+                <div class="formelt">
+                    <input type="submit" value="Calculate Power"><br><br>
+                </div>
+                <div class="formelt">
+                    Power (P): <input type="text" name="power" value="{{ p }}"> watts<br>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
